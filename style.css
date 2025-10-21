@@ -1,0 +1,658 @@
+/* === GLOBAL STYLES === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: #f4f9ff;
+    color: #222;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* === NAVBAR === */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #007bff, #00b4d8);
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-section img {
+    height: 40px;
+}
+
+.logo-section h2 {
+    color: white;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #caf0f8;
+}
+
+/* === HERO SECTION === */
+.hero {
+    text-align: center;
+    padding: 100px 20px 60px;
+    background: linear-gradient(to right, #caf0f8, #90e0ef);
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: #023e8a;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #333;
+    width: 80%;
+    margin: 0 auto 25px;
+}
+
+.hero img {
+    width: 250px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* === TECHNOLOGY SECTION === */
+.technology-section {
+    padding: 60px 40px;
+    background: #fff;
+}
+
+.technology-section h2 {
+    text-align: center;
+    color: #0077b6;
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-decoration: underline;
+}
+
+.tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.tech-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #e3f2fd;
+    padding: 20px;
+    border-radius: 12px;
+    width: 480px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-6px);
+}
+
+.tech-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.tech-card h3 {
+    color: #023e8a;
+    margin-bottom: 8px;
+}
+
+.tech-card p {
+    font-size: 15px;
+    color: #444;
+}
+
+/* === FOOTER === */
+footer {
+    background: linear-gradient(to right, #03045e, #0077b6);
+    color: white;
+    text-align: center;
+    padding: 25px 10px;
+    margin-top: 40px;
+    font-size: 15px;
+}
+
+footer a {
+    color: #90e0ef;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 200px) {
+    .tech-card {
+        flex-direction: column;
+        text-align: center;
+        width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        width: 95%;
+    }
+}
+
+@charset "UTF-8";
+
+
+/* ============================= */
+/* 🌐 GLOBAL STYLES & RESET */
+/* ============================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #e2e2e2;
+}
+
+/* ============================= */
+/* 🔝 NAVBAR */
+/* ============================= */
+.navbar {
+    transition: all 0.5s ease;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f5f2f2;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    position: absolute;
+    left: 20px;
+}
+
+.navbar .logo img {
+    height: 50px;
+    width: auto;
+}
+
+.navbar>div:nth-child(2) {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li a {
+    color: rgb(10, 10, 10);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: #ffcc00;
+}
+
+/* Link hover animation */
+.nav-link {
+    color: #0a0a0a;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background-color: #494949;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #00bfff;
+    transform: translateY(-3px);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hover effect on navbar */
+.navbar:hover {
+    background: linear-gradient(90deg, #c2c3c4, #c7cbd0);
+    box-shadow: 0 0 20px #a7a7a7;
+    transform: translateY(-2px);
+}
+
+.navbar.scrolled {
+    background: linear-gradient(90deg, #c2c3c4, #c7cbd0);
+    box-shadow: 0 0 15px #a7a7a7;
+    transform: translateY(-2px);
+}
+
+/* ============================= */
+/* ✉️ CONTACT FORM SECTION */
+/* ============================= */
+.form-container {
+    margin-top: 120px;
+    padding: 40px 20px;
+    background-color: #e2e2e2;
+}
+
+#contact {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+/* Contact Form */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+    border: 2px solid #434549;
+    border-radius: 10px;
+    padding: 20px;
+    background: #fff;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+form textarea {
+    resize: none;
+    min-height: 120px;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+#formMessage {
+    margin-top: 10px;
+    font-weight: bold;
+    color: red;
+}
+
+/* ============================= */
+/* 💡 RESPONSIVE DESIGN */
+/* ============================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .navbar .logo {
+        position: static;
+        margin-bottom: 10px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 10px;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    #contact h2 {
+        font-size: 24px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .navbar ul {
+        gap: 5px;
+    }
+
+    .navbar ul li a {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    #contact h2 {
+        font-size: 22px;
+    }
+}
+
+/* Very small devices */
+@media (max-width: 400px) {
+    #contact h2 {
+        font-size: 20px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 14px;
+    }
+
+    form button {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+/* === GLOBAL STYLES === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #fafafa;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* === NAVBAR === */
+.navbar {
+    background-color: #f3f3f3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 60px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-section img {
+    height: 40px;
+    width: auto;
+}
+
+.logo-section h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #222;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links .nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-links .nav-link:hover,
+.nav-links .nav-link.active {
+    color: #0077ff;
+    border-bottom: 2px solid #0077ff;
+}
+
+/* === HERO SECTION === */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 80px;
+    background-color: #e9e9e9;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 320px;
+}
+
+.hero-text h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.hero-text p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    color: #444;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #222;
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0077ff;
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    min-width: 300px;
+}
+
+.hero-image img {
+    width: 90%;
+    max-width: 420px;
+    height: auto;
+}
+
+/* === ABOUT SECTION === */
+#about {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+#about h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+#about p {
+    font-size: 1rem;
+    color: #444;
+}
+
+/* === TEAM SECTION === */
+#team {
+    background-color: #f8f8f8;
+    padding: 70px 40px;
+    text-align: center;
+}
+
+#team h3 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.team-member {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    width: 220px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.team-member img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+
+.team-member figcaption strong {
+    display: block;
+    font-size: 1.1rem;
+    color: #111;
+}
+
+.team-member figcaption span {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* === FOOTER === */
+footer {
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    margin-top: 50px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .hero-text {
+        margin-bottom: 30px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+}
