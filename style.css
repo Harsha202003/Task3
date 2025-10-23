@@ -50,7 +50,7 @@ body {
 
 .nav-links a {
     color: white;
-    text-decoration: none;
+    text-decoration: underline;
     font-size: 18px;
     font-weight: 600;
     transition: color 0.3s;
@@ -84,7 +84,6 @@ body {
     width: 250px;
     border-radius: 10px;
     margin-top: 20px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* === TECHNOLOGY SECTION === */
@@ -121,7 +120,7 @@ body {
 }
 
 .tech-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-5px);
 }
 
 .tech-card img {
@@ -195,31 +194,6 @@ body {
     background-color: #e2e2e2;
 }
 
-/* ============================= */
-/* 🔝 NAVBAR */
-/* ============================= */
-.navbar {
-    transition: all 0.5s ease;
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #f5f2f2;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.navbar .logo {
-    position: absolute;
-    left: 20px;
-}
-
-.navbar .logo img {
-    height: 50px;
-    width: auto;
-}
 
 .navbar>div:nth-child(2) {
     flex: 1;
@@ -244,14 +218,11 @@ body {
 }
 
 .navbar ul li a:hover,
-.navbar ul li a.active {
-    color: #ffcc00;
-}
+
 
 /* Link hover animation */
 .nav-link {
     color: #0a0a0a;
-    text-decoration: none;
     font-size: 18px;
     position: relative;
     transition: all 0.3s ease;
@@ -279,22 +250,166 @@ body {
 
 /* Hover effect on navbar */
 .navbar:hover {
-    background: linear-gradient(90deg, #c2c3c4, #c7cbd0);
+    background: linear-gradient(90deg, #c2c3c4, #a7aeb7);
     box-shadow: 0 0 20px #a7a7a7;
     transform: translateY(-2px);
 }
 
-.navbar.scrolled {
-    background: linear-gradient(90deg, #c2c3c4, #c7cbd0);
-    box-shadow: 0 0 15px #a7a7a7;
-    transform: translateY(-2px);
+/* === ABOUT SECTION === */
+#about {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
 }
+
+#about h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+#about p {
+    font-size: 1rem;
+    color: #444;
+}
+
+/* === HERO SECTION === */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 80px;
+    background-color: #e9e9e9;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 320px;
+}
+
+.hero-text h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.hero-text p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    color: #444;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #222;
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0077ff;
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    min-width: 300px;
+}
+
+.hero-image img {
+    width: 90%;
+    max-width: 420px;
+    height: auto;
+}
+
+
+
+/* === TEAM SECTION === */
+#team {
+    background-color: #f8f8f8;
+    padding: 70px 40px;
+    text-align: center;
+}
+
+#team h3 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.team-member {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    width: 220px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.team-member img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+
+.team-member figcaption strong {
+    display: block;
+    font-size: 1.1rem;
+    color: #111;
+}
+
+.team-member figcaption span {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .hero-text {
+        margin-bottom: 30px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+}
+
 
 /* ============================= */
 /* ✉️ CONTACT FORM SECTION */
 /* ============================= */
 .form-container {
-    margin-top: 120px;
     padding: 40px 20px;
     background-color: #e2e2e2;
 }
@@ -307,7 +422,6 @@ body {
 
 #contact h2 {
     font-size: 28px;
-    margin-bottom: 20px;
     color: #222;
 }
 
@@ -433,226 +547,5 @@ form button:hover {
     form button {
         width: 100%;
         font-size: 14px;
-    }
-}
-
-/* === GLOBAL STYLES === */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background-color: #fafafa;
-    color: #222;
-    line-height: 1.6;
-}
-
-/* === NAVBAR === */
-.navbar {
-    background-color: #f3f3f3;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 60px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.logo-section {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.logo-section img {
-    height: 40px;
-    width: auto;
-}
-
-.logo-section h2 {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #222;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
-.nav-links .nav-link {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.nav-links .nav-link:hover,
-.nav-links .nav-link.active {
-    color: #0077ff;
-    border-bottom: 2px solid #0077ff;
-}
-
-/* === HERO SECTION === */
-.hero-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 60px 80px;
-    background-color: #e9e9e9;
-    flex-wrap: wrap;
-}
-
-.hero-text {
-    flex: 1;
-    min-width: 320px;
-}
-
-.hero-text h1 {
-    font-size: 2.4rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.hero-text p {
-    font-size: 1rem;
-    margin-bottom: 25px;
-    color: #444;
-}
-
-.btn {
-    display: inline-block;
-    background-color: #222;
-    color: #fff;
-    padding: 10px 22px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #0077ff;
-    transform: translateY(-3px);
-}
-
-.hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    min-width: 300px;
-}
-
-.hero-image img {
-    width: 90%;
-    max-width: 420px;
-    height: auto;
-}
-
-/* === ABOUT SECTION === */
-#about {
-    text-align: center;
-    padding: 60px 20px;
-    max-width: 900px;
-    margin: auto;
-}
-
-#about h2 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #111;
-}
-
-#about p {
-    font-size: 1rem;
-    color: #444;
-}
-
-/* === TEAM SECTION === */
-#team {
-    background-color: #f8f8f8;
-    padding: 70px 40px;
-    text-align: center;
-}
-
-#team h3 {
-    font-size: 1.6rem;
-    margin-bottom: 25px;
-    color: #222;
-}
-
-.team-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-}
-
-.team-member {
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    padding: 25px;
-    width: 220px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.team-member:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
-}
-
-.team-member img {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 12px;
-}
-
-.team-member figcaption strong {
-    display: block;
-    font-size: 1.1rem;
-    color: #111;
-}
-
-.team-member figcaption span {
-    font-size: 0.9rem;
-    color: #555;
-}
-
-/* === FOOTER === */
-footer {
-    text-align: center;
-    background-color: #222;
-    color: #fff;
-    padding: 20px 0;
-    font-size: 0.9rem;
-    margin-top: 50px;
-}
-
-/* === RESPONSIVE === */
-@media (max-width: 768px) {
-    .hero-section {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 20px;
-    }
-
-    .hero-text {
-        margin-bottom: 30px;
-    }
-
-    .nav-links {
-        gap: 15px;
     }
 }

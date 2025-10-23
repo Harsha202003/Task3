@@ -1,0 +1,44 @@
+div.shapes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 100vh;
+}
+
+
+.star {
+    width: 200px;
+    height: 200px;
+    background: gold;
+    clip-path: polygon(50% 0%,
+            61% 35%,
+            98% 35%,
+            68% 57%,
+            79% 91%,
+            50% 70%,
+            21% 91%,
+            32% 57%,
+            2% 35%,
+            39% 35%);
+
+}
+
+
+.circle {
+    width: 200px;
+    height: 200px;
+    background-color: skyblue;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+
+.Triangle {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 170px solid red;
+    margin: 20px;
+}
