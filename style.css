@@ -70,3 +70,53 @@ h1 {
     font-size: 2em;
     display: none;
 }
+
+/* 🌐 Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .game-board {
+        grid-template-columns: repeat(3, 90px);
+        gap: 15px;
+    }
+
+    .card {
+        width: 90px;
+        height: 90px;
+        font-size: 1.8rem;
+    }
+
+    #startBtn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-board {
+        grid-template-columns: repeat(3, 80px);
+        gap: 10px;
+    }
+
+    .card {
+        width: 80px;
+        height: 80px;
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    #startBtn {
+        font-size: 13px;
+        padding: 7px 14px;
+    }
+
+    .score-board,
+    .chance-board {
+        font-size: 16px;
+    }
+}
